@@ -15,6 +15,9 @@ vue2 multi datetime picker, calendar
 ## V-Model
 #### \- An object with two fields: startDate, endDate
 
+# Demo
+### \- [JsFiddle](https://jsfiddle.net/gt0105/Lyr41s1g/2/)
+
 # Example
 
 ### Simple Usage
