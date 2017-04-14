@@ -1,0 +1,411 @@
+/* datepicker style */
+.vue_datepicker {
+    position: relative;
+    display: inline-block;
+}
+
+input.vue_datepicker-input.with-reset-button {
+    padding-right: 25px;
+}
+
+.vue_datepicker > button.close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    outline: none;
+    z-index: 2;
+    display: block;
+    width: 34px;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+}
+
+.vue_datepicker > button.close:focus {
+    opacity: .2;
+}
+
+.vue_datepicker-popup {
+    position: absolute;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #fff;
+    margin-top: 2px;
+    z-index: 1000;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+@include clearfix;
+}
+
+.vue_datepicker-inner {
+    width: 240px;
+    float: left;
+}
+
+.vue_datepicker-body {
+    padding: 10px 10px;
+    text-align: center;
+}
+
+.vue_datepicker-body span {
+    display: inline-block;
+    width: 30px;
+    line-height: 28px;
+    height: 28px;
+}
+
+.vue_datepicker-ctrl {
+    position: relative;
+    /*height: 30px;*/
+    line-height: 30px;
+    /*font-weight: bold;*/
+    text-align: center;
+}
+
+.vue_datepicker-ctrl p {
+    display: inline-block;
+    width: 30px;
+    line-height: 28px;
+    height: 28px;
+    width: 65%;
+}
+
+.vue_datepicker-ctrl span {
+    display: inline-block;
+    width: 20px;
+    line-height: 28px;
+    height: 28px;
+    position: relative;
+}
+
+.vue_datepicker-monthRange span {
+    width: 45px;
+    height: 50px;
+    line-height: 45px;
+}
+
+.vue_datepicker-monthRange {
+    margin-top: 10px
+}
+
+.vue_datepicker-monthRange span,
+.vue_datepicker-ctrl span,
+.vue_datepicker-ctrl p,
+.vue_datepicker-dateRange span {
+    cursor: pointer;
+}
+
+.vue_datepicker-monthRange span:hover,
+.vue_datepicker-ctrl p:hover,
+.vue_datepicker-ctrl i:hover,
+.vue_datepicker-dateRange span:hover,
+.vue_datepicker-dateRange-item-hover {
+    background-color: #eeeeee;
+}
+
+.vue_datepicker-dateRange .daytoday-end:hover {
+    background: rgb(50, 118, 177) !important;
+    color: white !important;
+}
+
+.vue_datepicker-dateRange .daytoday-range,
+.vue_datepicker-dateRange .daytoday-range:hover {
+    background-color: #ddd;
+}
+
+.vue_datepicker-weekRange span {
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+}
+
+.vue_datepicker-label {
+    background-color: #f8f8f8;
+    font-weight: 700;
+    padding: 7px 0;
+    text-align: center;
+}
+
+.month-btn {
+    font-weight: bold;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.vue_datepicker-preBtn {
+    left: 2px;
+}
+
+.vue_datepicker-nextBtn {
+    right: 2px;
+}
+
+#dateItem {
+    display: inline-block;
+}
+
+.vue_datepicker-item-disable {
+    background-color: white !important;
+    color: #999;
+}
+
+.vue_datepicker-item-disable .div {
+    cursor: none;
+}
+
+.vue_datepicker-month-item-disable {
+    background-color: white !important;
+    color: #999;
+}
+
+.decadeRange span:first-child,
+.decadeRange span:last-child {
+    color: #999;
+}
+
+.vue_datepicker-item-disable,
+.vue_datepicker-item-gray {
+    font-size: 11px;
+}
+
+.vue_datepicker-item-normal {
+    font-size: 15px;
+}
+
+.vue_datepicker-dateRange-item-active:hover,
+.vue_datepicker-dateRange-item-active {
+    background: rgb(50, 118, 177) !important;
+    color: white !important;
+}
+
+.vue_datepicker .vue_datepicker_overlay {
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+@font-face {
+    font-family: Glyphicons Halflings;
+    src: url(/html/datetime_picker/images/vue_calendar.eot);
+    src: url(/html/datetime_picker/images/vue_calendar.eot?#iefix) format("embedded-opentype"),
+    url(/html/datetime_picker/images/vue_calendar.woff2) format("woff2"),
+    url(/html/datetime_picker/images/vue_calendar.woff) format("woff"),
+    url(/html/datetime_picker/images/vue_calendar.ttf) format("truetype"),
+    url(/html/datetime_picker/images/vue_calendar.svg#glyphicons_halflingsregular) format("svg")
+}
+
+.glyphicon {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: Glyphicons Halflings;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.glyphicon-chevron-left:before {
+    content: "\E079"
+}
+
+.glyphicon-chevron-right:before {
+    content: "\E080"
+}
+
+.glyphicon-triangle-right:before {
+    content: "\e250"
+}
+
+.glyphicon-triangle-left:before {
+    content: "\e251"
+}
+
+.glyphicon-backward:before {
+    content: "\e071"
+}
+
+.glyphicon-forward:before {
+    content: "\e075"
+}
+
+.form-control, output {
+    font-size: 14px;
+    line-height: 1.42857;
+    color: #555
+}
+
+.form-control {
+    width: 100%;
+    height: 20px;
+    padding: 6px 12px;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out
+}
+
+.form-control:focus {
+    border-color: #66afe9;
+    outline: 0;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6)
+}
+
+.form-control::-moz-placeholder {
+    color: #999;
+    opacity: 1
+}
+
+.form-control:-ms-input-placeholder {
+    color: #999
+}
+
+.form-control::-webkit-input-placeholder {
+    color: #999
+}
+
+.form-control::-ms-expand {
+    border: 0;
+    background-color: transparent
+}
+
+
+/* timepicker style*/
+.time-picker {
+    display: inline-block;
+    position: relative;
+    font-size: 1em;
+    font-family: sans-serif;
+}
+
+.time-picker * {
+    /*box-sizing: border-box;*/
+}
+
+.time-picker input.display-time {
+    /*
+    border: 1px solid #d2d2d2;
+    width: 10em;
+    height: 2.2em;
+    padding: 0.3em 0.5em;
+    font-size: 1em;
+    */
+    font-size: 14px;
+    width: 100%;
+    height: 20px;
+    padding: 6px 12px;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out
+}
+
+.time-picker .clear-btn {
+    position: absolute;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin-top: -0.15em;
+    z-index: 3;
+    font-size: 1.1em;
+    line-height: 1em;
+    width: 1.3em;
+    color: #d2d2d2;
+    background: rgba(255, 255, 255, 0);
+    text-align: center;
+    font-style: normal;
+
+    -webkit-transition: color .2s;
+    transition: color .2s;
+}
+
+.time-picker .clear-btn:hover {
+    color: #797979;
+    cursor: pointer;
+}
+
+.time-picker .time-picker-overlay {
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.time-picker .dropdown {
+    position: absolute;
+    z-index: 5;
+    top: calc(2.2em + 2px);
+    left: 0;
+    background: #fff;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
+    width: 10em;
+    height: 10em;
+    font-weight: normal;
+}
+
+.time-picker .dropdown .select-list {
+    width: 10em;
+    height: 10em;
+    overflow: hidden;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+.time-picker .dropdown ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    flex: 1;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.time-picker .dropdown ul.minutes,
+.time-picker .dropdown ul.seconds,
+.time-picker .dropdown ul.apms {
+    border-left: 1px solid #fff;
+}
+
+.time-picker .dropdown ul li {
+    text-align: center;
+    padding: 0.3em 0;
+    color: #161616;
+}
+
+.time-picker .dropdown ul li:not(.hint):hover {
+    background: rgba(0, 0, 0, .08);
+    color: #161616;
+    cursor: pointer;
+}
+
+.time-picker .dropdown ul li.active,
+.time-picker .dropdown ul li.active:hover {
+    background: #41B883;
+    color: #fff;
+}
+
+.time-picker .dropdown .hint {
+    color: #a5a5a5;
+    cursor: default;
+    font-size: 0.8em;
+}

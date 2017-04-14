@@ -1,0 +1,99 @@
+<script type="text/javascript" language="javascript" src="https://unpkg.com/vue@2.1.6/dist/vue.js" charset="UTF-8"></script>
+<script type="text/javascript" language="javascript" src="vue-multi-datetimepicker.js" charset="UTF-8"></script>
+<link rel="stylesheet" type="text/css" href="vue-multi-datetimepicker.css">
+
+
+<div id="calendarDemo">
+    <vue-multi-datetimepicker
+            :disabled-to="disabledTo"
+            :disabled-from="disabledFrom"
+            :only-month="onlyMonth"
+            :has-time-input=true
+            v-model="searchDate"
+    ></vue-multi-datetimepicker>
+
+    <br/>
+    <br/>
+    selectedDate : {{searchDate.startDate}} / {{searchDate.endDate}}
+    <br/>
+    selectedDateToString : {{getStringDateTime(searchDate.startDate)}} / {{getStringDateTime(searchDate.endDate)}}
+
+    <br><br>
+    <button v-on:click="dateBetweenButton('sec', 30)">30s</button>
+    <button v-on:click="dateBetweenButton('min', 1)">1m</button>
+    <button v-on:click="dateBetweenButton('min', 10)">10m</button>
+    <button v-on:click="dateBetweenButton('hour', 1)">1h</button>
+    <button v-on:click="dateBetweenButton('day', 1)">1d</button>
+
+    <button v-on:click="changeType()">date type change</button>
+</div>
+
+<script>
+    new Vue({
+        el: '#calendarDemo',
+        data: {
+            calendarValue: '',
+            dateFormat: "yyyy년 MM월 dd일",
+            monthFormat: "yyyy.MM",
+            timeFormat: "HH시 mm분 ss초",
+            minuteInterval: 10,
+            placeHolder: "날짜를 입력하세요",
+            searchDate : {
+                startDate : new Date() - 2,
+                endDate : new Date(),
+            },
+            disabledTo : new Date(),
+            disabledFrom : new Date(),
+            onlyMonth: false
+        },
+        created : function () {
+            this.searchDate.startDate = new Date();
+            this.searchDate.endDate = new Date();
+
+            var currentDate = new Date();
+            this.disabledTo = new Date(currentDate.getFullYear(), currentDate.getMonth() - 4, currentDate.getDate());
+
+            this.disabledFrom = new Date(currentDate.getFullYear(), currentDate.getMonth() + 3, currentDate.getDate() + 1);
+        },
+        computed : {
+        },
+        methods:{
+            onDayClick : function (date, str) {
+                this.calendarValue = str;
+            },
+            dateBetweenButton: function(type, value) {
+                var endDate = this.searchDate.endDate;
+                endDate = new Date(endDate.getFullYear(), endDate.getMonth(), endDate.getDate(), endDate.getHours(), endDate.getMinutes(), endDate.getSeconds());
+                var currentDate = this.searchDate.endDate;
+
+                if (type == "sec") {
+                    currentDate.setSeconds(currentDate.getSeconds() - value);
+                } else if (type == "min") {
+                    currentDate.setMinutes(currentDate.getMinutes() - value);
+                } else if (type == "hour") {
+                    currentDate.setHours(currentDate.getHours() - value);
+                } else if (type == "day") {
+                    currentDate.setDate(currentDate.getDate() - value);
+                } else if (type == "month") {
+                    currentDate.setMonth(currentDate.getMonth() - value);
+                }
+
+                this.searchDate = {
+                    startDate : currentDate,
+                    endDate : endDate
+                }
+
+            },
+            getStringDateTime : function (date) {
+                return "" + date.getFullYear() + "/" + this.dateFormatter(date.getMonth() + 1)  + "/" + this.dateFormatter(date.getDate())  + " "
+                        + this.dateFormatter(date.getHours()) + ":" + this.dateFormatter(date.getMinutes()) + ":" + this.dateFormatter(date.getSeconds());
+            },
+            changeType: function() {
+                this.onlyMonth = !this.onlyMonth;
+            },
+            dateFormatter : function(date) {
+                return ('0' + date).slice(-2);
+            }
+        },
+    });
+</script>
