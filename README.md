@@ -3,7 +3,9 @@ vue2 multi datetime picker, calendar
 
 #### \- Return value as Date type to v-model
 
-### Co-Developer : nsw@gmail.com
+### Co-Developer : [namsangwan](https://github.com/namsangwan)
+
+- - -
 
 ## Component Structure
 \- This component has the following tree structure.<br/>
@@ -19,6 +21,10 @@ vue2 multi datetime picker, calendar
 
 # Demo
 ### \- [JsFiddle](https://jsfiddle.net/gt0105/Lyr41s1g/2/)
+
+# Caution
+\- Font resource path setting is required : @font-face in vue-multi-datetimepicker.css
+   Use the files under the fonts folder
 
 # Example
 
