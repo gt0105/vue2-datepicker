@@ -1,5 +1,5 @@
 # vue-multi-datetime-picker
-vue2 multi datetime picker, calendar
+vue2 multi datetime picker, datepicker, calendar
 
 #### \- Return value as Date type to v-model
 
