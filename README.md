@@ -66,8 +66,8 @@ vue2 multi datetime picker, calendar
 # Options
 - has-date-input: Whether the calendar input box is exposed
 - has-time-input: time input box exposed or not true if 00:00:00
-- date-format: Date input box Exposure format Default is "yyyy.MM.dd day"
-- month-format: For monthly calendars, date input box Exposure format Default is "yyyy.MM"
+- date-format: Date input box Exposure format Default is "yyyy-MM-dd"
+- month-format: For monthly calendars, date input box Exposure format Default is "yyyy-MM"
 - time-format: Time input box Exposure format Default is "HH:mm:ss"
 - disable-from : Set selection limits for previous dates
 - disable-to : Set selection limits for after dates
