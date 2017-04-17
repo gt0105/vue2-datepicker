@@ -16,10 +16,10 @@
                 default: '20px'
             },
             dateFormat: {
-                default: 'yyyy.MM.dd'
+                default: 'yyyy-MM-dd'
             },
             monthFormat: {
-                default: 'yyyy.MM'
+                default: 'yyyy-MM'
             },
             dateInputWidth: {
                 type: String,
@@ -237,10 +237,10 @@
                 default: '20px'
             },
             dateFormat: {
-                default: 'yyyy.MM.dd'
+                default: 'yyyy-MM-dd'
             },
             monthFormat: {
-                default: 'yyyy.MM'
+                default: 'yyyy-MM'
             },
             dateInputWidth: {
                 type: String,
@@ -458,7 +458,7 @@ Vue.component('vue-calendar', {
             type: Object
         },
         format: {
-            default: 'yyyy.MM.dd'
+            default: 'yyyy-MM-dd'
         },
         height: {
             type: String,
