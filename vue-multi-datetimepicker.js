@@ -240,7 +240,7 @@
                 default: 'yyyy.MM.dd'
             },
             monthFormat: {
-                default: 'yyyy.MM.dd'
+                default: 'yyyy.MM'
             },
             dateInputWidth: {
                 type: String,
