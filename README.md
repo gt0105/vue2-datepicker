@@ -1,4 +1,4 @@
-# vue-multi-datetime-picker
+# vue-multi-datepicker
 vue2 multi datetime picker, datepicker, calendar
 
 #### \- Return value as Date type to v-model
@@ -20,7 +20,7 @@ vue2 multi datetime picker, datepicker, calendar
 #### \- An object with two fields: startDate, endDate
 
 # Demo
-### \- [JsFiddle](https://jsfiddle.net/gt0105/Lyr41s1g/2/)
+### \- [JsFiddle](https://jsfiddle.net/gt0105/skdeaaak/)
 
 # Caution
 \- Font resource path setting is required : @font-face in vue-multi-datetimepicker.css
